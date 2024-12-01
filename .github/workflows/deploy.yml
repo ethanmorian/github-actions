@@ -32,3 +32,8 @@ jobs:
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+
+      - name: Use Secret in GitHub Actions
+        run: |
+          echo ${{ secrets.FIRST_SECRET }}
+          echo ${{ secrets.SECOND_SECRET }}
