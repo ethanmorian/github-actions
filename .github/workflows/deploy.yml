@@ -1,14 +1,29 @@
-name: Github Actions
+# workflow 이름
+name: Github Actions Practice
 
+# workflow 를 실행할 event
+# main branch 에 push 할 때
 on:
   push:
     branches:
       - main
 
+# event 발생 시 실행할 동작
 jobs:
+
+  # 동작의 이름
   My-Deploy-Job:
+    #    동작할 환경
     runs-on: ubuntu-latest
 
+    # 동작의 단위
     steps:
-      - name: Hello World
+      # 단위의 이름
+      - name: Printing Hello World
+        # 동작 작성
         run: echo "Hello World"
+
+      - name: writing multiple commands
+        run: |
+          echo "Good"
+          echo "Morning"
